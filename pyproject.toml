@@ -19,9 +19,6 @@ dependencies = [
     "wandb"
 ]
 
-[tool.setuptools]
-py-modules = []
-
 
 # links displayed on the pypi page
 [project.urls]
