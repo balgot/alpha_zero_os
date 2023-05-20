@@ -1,13 +1,13 @@
 # general information about the project
 [project]
 name = "azero"
-version = "1.0.0"
+version = "1.0.1"
 description = "Customized alpha zero implementation from `open_spiel`."
 readme = "README.md"
 requires-python = ">=3.9"
 keywords = ["search", "alpha-zero", "game"]
 authors = [
-    { name = "Michal Barnišin", email = "michal.barnisin14+mathematico@gmail.com" }
+    { name = "Michal Barnišin", email = "michal.barnisin14+azero@gmail.com" }
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-py-modules = [ "azero" ]
+py-modules = []
 
 
 # links displayed on the pypi page
