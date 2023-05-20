@@ -1,0 +1,34 @@
+# general information about the project
+[project]
+name = "azero"
+version = "1.0.0"
+description = "Customized alpha zero implementation from `open_spiel`."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["search", "alpha-zero", "game"]
+authors = [
+    { name = "Michal Barnišin", email = "michal.barnisin14+mathematico@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "tensorflow",
+    "open_spiel",
+    "wandb"
+]
+
+[tool.setuptools]
+py-modules = [ "azero" ]
+
+
+# links displayed on the pypi page
+[project.urls]
+repository = "https://github.com/balgot/alpha_zero_os"
+
+
+# settings for building the package
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

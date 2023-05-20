@@ -1,0 +1,5 @@
+logs/
+venv/
+wandb/
+*.egg-info/
+__pycache__/
