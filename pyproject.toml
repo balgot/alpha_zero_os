@@ -1,7 +1,7 @@
 # general information about the project
 [project]
 name = "azero"
-version = "1.0.1"
+version = "1.0.2"
 description = "Customized alpha zero implementation from `open_spiel`."
 readme = "README.md"
 requires-python = ">=3.9"

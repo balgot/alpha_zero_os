@@ -247,6 +247,7 @@ def learner(*, game, config, actors, evaluators, broadcast_fn, logger, checkpoin
             value_prediction.reset()
         game_lengths.reset()
         game_lengths_hist.reset()
+        _returns.clear()
 
 
         logger.print(f"Collecting trajectories (step={step})")
@@ -281,16 +282,13 @@ def learner(*, game, config, actors, evaluators, broadcast_fn, logger, checkpoin
             "trajectories_per_s": num_trajectories / seconds,
             "game_length": game_lengths.as_dict,
             "game_length_hist": game_lengths_hist.data,
-            "eval": {
-                "count": evals[0].total_seen,
-                "results": [sum(e.data) / len(e) if e else 0 for e in evals],
-                "mean": np.mean([sum(e.data) / len(e) if e else 0 for e in evals])
-            },
             "returns": {
                 "mean": np.mean(_returns),
                 "std": np.std(_returns),
                 "max": max(_returns),
                 "min": min(_returns),
+                "80": np.percentile(_returns, 80),
+                "20": np.percentile(_returns, 20),
                 "data": _returns
             },
             "loss": {
